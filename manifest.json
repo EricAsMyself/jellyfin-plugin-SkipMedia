@@ -2,7 +2,7 @@
   {
     "guid": "d477f9fe-bde6-467c-88ba-5336048f955c",
     "name": "SkipMedia",
-    "description": "Skip media from edl file",
+    "description": "When a .edl file is detected with the same name as a video. It will skip the timestamps in that edl file.",
     "overview": "Skip media from edl file",
     "owner": "EricAsMyself",
     "category": "General",
