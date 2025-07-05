@@ -1,6 +1,7 @@
 ---
 name: "SkipMedia"
 guid: "d477f9fe-bde6-467c-88ba-5336048f955c"
+imageUrl: "https://raw.githubusercontent.com/EricAsMyself/jellyfin-plugin-SkipMedia/main/images/jellyfin-plugin-skipmedia.png"
 version: "1.0.0.1"
 targetAbi: "10.9.0.0"
 framework: "net8.0"
