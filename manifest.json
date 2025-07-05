@@ -12,8 +12,8 @@
         "version": "1.0.0.1",
         "changelog": "Initial release.",
         "targetAbi": "10.9.0.0",
-        "sourceUrl": "https://github.com/EricAsMyself/jellyfin-plugin-SkipMedia/releases/download/v.1.0.0.1/EDLSkipper.zip",
-        "checksum": "992e4bf05e7aa0ca4ad28510c299aabc73faef0f2cdeec6bbbb33f6a292ae8fc",
+        "sourceUrl": "https://github.com/EricAsMyself/jellyfin-plugin-SkipMedia/releases/download/v.1.0.0.1/SkipMedia.zip",
+        "checksum": "28ea5ebb6c04d0330654dd4b556583539bdf358ee9b37bbb7da35dc8910edf07",
         "timestamp": "2025-07-05T15:00:00Z"
       }
     ]
