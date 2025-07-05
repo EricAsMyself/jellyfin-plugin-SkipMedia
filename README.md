@@ -22,17 +22,13 @@ For each video being played, the plugin checks if there’s a `.edl` file with t
 For example, if you're watching:
 
 ```
-
 /media/movies/MyMovie.mkv
-
 ```
 
 You must also have an EDL file at:
 
 ```
-
 /media/movies/MyMovie.edl
-
 ````
 
 ### Example `.edl` File
@@ -64,7 +60,6 @@ The third column (`3`) means **"cut/skip"**, which is the only supported action.
 
 * ✅ Tested on Jellyfin 10.10.7
 * ⚠️ Does not support mute or pause actions.
-* 🚫 EDL types 0–2 are ignored.
 
 ---
 
