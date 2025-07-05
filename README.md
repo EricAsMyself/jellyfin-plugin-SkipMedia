@@ -1,4 +1,3 @@
-```markdown
 # Jellyfin EDL Skipper Plugin
 
 A Jellyfin plugin that automatically skips specified portions of videos using `.edl` (Edit Decision List) files.
@@ -86,16 +85,12 @@ PRs are welcome! If you'd like to add support for other EDL types, client muting
 
 ## Some more comments
 
-A large amount of this was vibe coded. I wanted to try
+This is my first plugin for Jellyfin. I'm happy to add other features, some just couldn't be added because of plugin supports.
+
 
 ---
-## License
-
-MIT License
 
 ```
-
----
 
 Let me know if you'd like me to also include a section for building instructions or contributing guidelines.
 ```
