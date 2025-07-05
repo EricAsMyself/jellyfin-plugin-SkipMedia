@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SkipMedia</title>
+</head>
+<body>
+    <div id="TemplateConfigPage" data-role="page" class="page type-interior pluginConfigurationPage" data-require="emby-input,emby-button,emby-select,emby-checkbox">
+        <div data-role="content">
+            <div class="content-primary">
+                <form id="TemplateConfigForm">
+
+                    <!-- Existing fields ... -->
+
+                    <div class="inputContainer">
+                        <label class="inputLabel inputLabelUnfocused" for="SessionCheckInterval">Session Check Interval (ms)</label>
+                        <input id="SessionCheckInterval" name="SessionCheckInterval" type="number" is="emby-input" min="10" />
+                        <div class="fieldDescription">How often (in milliseconds) to check sessions. Default is 100 ms.</div>
+                    </div>
+
+                    <!-- Existing Save Button -->
+                    <div>
+                        <button is="emby-button" type="submit" class="raised button-submit block emby-button">
+                            <span>Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var TemplateConfig = {
+                pluginUniqueId: 'eb5d7894-8eef-4b36-aa6f-5d124e828ce1'
+            };
+
+            document.querySelector('#TemplateConfigPage')
+                .addEventListener('pageshow', function () {
+                    Dashboard.showLoadingMsg();
+                    ApiClient.getPluginConfiguration(TemplateConfig.pluginUniqueId).then(function (config) {
+                        document.querySelector('#Options').value = config.Options;
+                        document.querySelector('#AnInteger').value = config.AnInteger;
+                        document.querySelector('#TrueFalseSetting').checked = config.TrueFalseSetting;
+                        document.querySelector('#AString').value = config.AString;
+                        document.querySelector('#SessionCheckInterval').value = config.SessionCheckInterval || 100;
+                        Dashboard.hideLoadingMsg();
+                    });
+                });
+
+            document.querySelector('#TemplateConfigForm')
+                .addEventListener('submit', function (e) {
+                    Dashboard.showLoadingMsg();
+                    ApiClient.getPluginConfiguration(TemplateConfig.pluginUniqueId).then(function (config) {
+                        config.Options = document.querySelector('#Options').value;
+                        config.AnInteger = document.querySelector('#AnInteger').value;
+                        config.TrueFalseSetting = document.querySelector('#TrueFalseSetting').checked;
+                        config.AString = document.querySelector('#AString').value;
+                        config.SessionCheckInterval = parseInt(document.querySelector('#SessionCheckInterval').value || "100");
+                        ApiClient.updatePluginConfiguration(TemplateConfig.pluginUniqueId, config).then(function (result) {
+                            Dashboard.processPluginConfigurationUpdateResult(result);
+                        });
+                    });
+
+                    e.preventDefault();
+                    return false;
+                });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+---
+name: "SkipMedia"
+guid: "d477f9fe-bde6-467c-88ba-5336048f955c"
+version: "1.0.0.1"
+targetAbi: "10.9.0.0"
+framework: "net8.0"
+overview: "skip media from edl file"
+description: >
+  This Plugin takes in edl files names the exact same way as your movie, and skips the timestamps in the video.
+  Note: This won't mute or cut from the item itself, it just will skip over portions. It also will check every few milliseconds, so it isn't frame for frame accurate.
+category: "General"
+owner: "EricAsMyself"
+artifacts:
+- "Jellyfin.Plugin.SkipMedia.dll"
+changelog: >
+  changelog
