@@ -13,7 +13,7 @@
         "changelog": "Initial release.",
         "targetAbi": "10.9.0.0",
         "sourceUrl": "https://github.com/EricAsMyself/jellyfin-plugin-SkipMedia/releases/download/v.1.0.0.1/SkipMedia.zip",
-        "checksum": "5DF420EC5B28FDFA14ECE8C8CFA24E46",
+        "checksum": "5df420ec5b28fdfa14ece8c8cfa24e46",
         "timestamp": "2025-07-05T15:00:00Z"
       }
     ]
